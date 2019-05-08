@@ -142,8 +142,8 @@ Window {
             target: send_button
             onClicked: {
                 network.qmlToCXX(send.text)
-                chat.text += send.text
-                chat.text += "\n"
+                //chat.text += send.text
+                //chat.text += "\n"
                 send.clear()
             }
         }

@@ -26,7 +26,7 @@ void network::sendPortToClient(QString str)
 void network::setIpAndPort()
 {
     tcpClient->connectToHost(ip,port,QTcpSocket::ReadWrite);
-    tcpClient->write("\nhahahahaha");
+    tcpClient->write("ANDROID_CLIENT");
 }
 
 void network::qmlToCXX(QString str)
@@ -38,6 +38,7 @@ void network::qmlToCXX(QString str)
 void network::sendDataToServer()
 {
     tcpClient->write(qmlData.toUtf8());
+
 }
 
 QString network::getDatafromServer()
